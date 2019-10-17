@@ -18,7 +18,7 @@ export const ITEMS: Item[] = [
 ];
 
 ITEMS.forEach( i => {
-  i.img = "/assets/img/" + i.img;
+  i.img = "assets/img/" + i.img;
 });
 
 export const BOOTS: {name, damage, cdr, speed, critical, img}[] = [
