@@ -99,6 +99,10 @@
     </mat-radio-group>
   </div>
 
+  <div style="padding: 6px">
+    <mat-slide-toggle [(ngModel)]="uniqueItems">Unique items only !</mat-slide-toggle>
+  </div>
+
   <button mat-raised-button (click)="find()">Find</button>
 
   <div class="list">

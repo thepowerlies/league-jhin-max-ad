@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {ITEMS} from './data/items';
 import {Item} from './data/item.interface';
 import {COMB} from "./data/combinations";
+import {COMB_UNIQUE} from './data/combinations-unique';
 
 @Component({
   selector: 'app-root',
@@ -32,6 +33,8 @@ export class AppComponent {
   runeOffense = "ad";
   runeFlex = "ad";
 
+  uniqueItems = false;
+
   constructor(){
     for(let i=0;i<18; i++)
       this.levels.push(i+1);
@@ -41,13 +44,7 @@ export class AppComponent {
 
   find(){
     this.list = [];
-    let max = this.items.length - 1;
-
-
-    let working = true;
-    let count = 0;
-    let maxIndexes = null;
-    let maxValue = 0;
+    this.combinations = this.uniqueItems ? COMB_UNIQUE : COMB;
 
    this.combinations.forEach( combination => {
      let items = [];
@@ -121,6 +118,9 @@ export class AppComponent {
     }
     if(this.lethalTempo){
       as+= 35.882 + 4.118 * this.level;
+    }
+    if(crit > 100){
+      crit = 100;
     }
 
     let percentage = this.passiveScaling[this.level-1];
