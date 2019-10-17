@@ -29,6 +29,9 @@ export class AppComponent {
 
   combinations = COMB;
 
+  runeOffense = "ad";
+  runeFlex = "ad";
+
   constructor(){
     for(let i=0;i<18; i++)
       this.levels.push(i+1);
@@ -79,6 +82,20 @@ export class AppComponent {
     });
 
 
+    switch (this.runeOffense) {
+      case "ad":
+        ad+= 5.4;
+        break;
+      case "as":
+        as+= 10;
+        break;
+      case "cdr":
+        cdr+= this.level > 10 ? 10 : this.level;
+        break;
+    }
+    if(this.runeFlex === "ad"){
+      ad+=5.4;
+    }
     if(this.excellence === "Transcendence"){
       cdr+=10;
       if(cdr > 40){

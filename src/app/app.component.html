@@ -74,6 +74,30 @@
     <img src="/assets/img/Eyeball_Collection_rune.png" class="icon" style="margin-left: 10px"/>
     Eyeball collection: <mat-checkbox [(ngModel)]="eyeball"></mat-checkbox>
   </div>
+  <div>
+    Rune Offense:
+    <mat-radio-group [(ngModel)]="runeOffense">
+      <mat-radio-button class="example-radio-button"  value="ad">
+        6+ AD
+      </mat-radio-button>
+      <mat-radio-button class="example-radio-button"  value="as">
+        10% Attack speed
+      </mat-radio-button>
+      <mat-radio-button class="example-radio-button"  value="cdr">
+        +10% scaling cdr
+      </mat-radio-button>
+    </mat-radio-group>
+    <br/>
+    Rune Flex
+    <mat-radio-group [(ngModel)]="runeFlex">
+      <mat-radio-button class="example-radio-button"  value="ad">
+        6+ AD
+      </mat-radio-button>
+      <mat-radio-button class="example-radio-button"  value="def">
+        defensive
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
 
   <button mat-raised-button (click)="find()">Find</button>
 
@@ -81,7 +105,7 @@
     <div class="item" *ngFor="let row of list; let i = index">
       <span class="index">{{i+1}}</span>
       <img *ngFor="let item of row.items" [src]="item.img"/>
-      <span>AD: {{row.ad}}</span>
+      <span>AD: {{row.ad.toFixed(2)}}</span>
     </div>
   </div>
 </div>
