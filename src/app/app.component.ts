@@ -112,7 +112,6 @@ export class AppComponent {
       as+= 18;
     }
     if(this.eyeball){
-      console.log("eyeball");
       ad+= 18;
     }
     if(this.hailOfBlades){
@@ -127,7 +126,6 @@ export class AppComponent {
     percentage += 0.25 * as;
 
 
-    console.log(ad + (ad/100*percentage));
     return ad + (ad/100*percentage);
   }
 
