@@ -10,3 +10,34 @@
 mat-radio-button {
   margin-left: 10px;
 }
+
+.list .item{
+  display: flex; align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid grey;
+  img {
+    margin: 0 4px;
+    width: 50px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 3px;
+  }
+
+  .index {
+    width: 30px;
+    background-color: #cb3537;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 30px;
+    color: white;
+    margin-right: 20px;
+  }
+}
+
+img.icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}

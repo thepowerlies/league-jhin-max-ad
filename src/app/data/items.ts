@@ -16,6 +16,10 @@ export const ITEMS: Item[] = [
   {name: "Guinsoo's Rageblade", damage: 25, critical: 0, speed: 63, cdr: 0, img: "Guinsoos_Rageblade_item.png"}
 ];
 
+ITEMS.forEach( i => {
+  i.img = "/assets/img/" + i.img;
+});
+
 export const BOOTS: {name, damage, cdr, speed, critical, img}[] = [
   {name: "Berserker's Greaves", damage: 0, critical: 0, speed: 35, cdr: 0, img: "Berserkers_Greaves_item.png"},
   {name: "Ionian Boots of Lucidity", damage: 0, cdr: 10, speed: 0, critical: 0, img: "Ionian_Boots_of_Lucidity_item.png"},

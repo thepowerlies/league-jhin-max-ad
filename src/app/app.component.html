@@ -7,7 +7,7 @@
       </mat-option>
     </mat-select>
   </mat-form-field>
-  <span> Base AD: {{getBaseAd()}}</span>
+  <span> Base AD: {{getBaseAd()}} -- Bonus AS: {{getBonusAS()}}%</span>
 
 <!--  <mat-form-field>-->
 <!--    <input matInput placeholder="Level" [(ngModel)]="level">-->
@@ -33,7 +33,7 @@
 
   <div style="margin: 4px 0">
     Excellence:
-    <mat-radio-group [(ngModel)]="infernal">
+    <mat-radio-group [(ngModel)]="excellence">
       <mat-radio-button class="example-radio-button"  [value]="null">
         None
       </mat-radio-button>
@@ -66,4 +66,11 @@
 
   <button mat-button (click)="find()">Find</button>
 
+  <div class="list">
+    <div class="item" *ngFor="let row of list; let i = index">
+      <span class="index">{{i+1}}</span>
+      <img *ngFor="let item of row.items" [src]="item.img"/>
+      <span>AD: {{row.ad}}</span>
+    </div>
+  </div>
 </div>
