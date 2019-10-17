@@ -38,15 +38,18 @@
         None
       </mat-radio-button>
       <mat-radio-button class="example-radio-button"  value="Transcendence">
+        <img src="/assets/img/Transcendence_rune.png"  class="icon"/>
         Transcendence
       </mat-radio-button>
       <mat-radio-button class="example-radio-button"  value="Absolute Focus">
+        <img src="/assets/img/Absolute_Focus_rune.png" class="icon"/>
         Absolute Focus
       </mat-radio-button>
 
     </mat-radio-group>
   </div>
   <div style="margin: 4px 0">
+    <img src="/assets/img/Gathering_Storm_rune.png" class="icon"/>
     Gathering Storm: <mat-slide-toggle [(ngModel)]="gatheringStorm" style="margin-left: 5px"></mat-slide-toggle>
     <mat-form-field *ngIf="gatheringStorm">
       <mat-label>Gathering Value</mat-label>
@@ -58,9 +61,17 @@
     </mat-form-field>
   </div>
   <div style="margin: 4px 0">
+    <img src="/assets/img/Lethal_Tempo_rune.png" class="icon"/>
+    Lethal Tempo: <mat-checkbox [(ngModel)]="lethalTempo"></mat-checkbox>
+
+    <img src="/assets/img/Legend-_Alacrity_rune.png" class="icon" style="margin-left: 10px"/>
     Legends Alacrity: <mat-checkbox [(ngModel)]="alacrity"></mat-checkbox>
   </div>
   <div style="margin: 4px 0">
+    <img src="/assets/img/Hail_of_Blades_rune.png" class="icon"/>
+    Hail of Blades: <mat-checkbox [(ngModel)]="hailOfBlades"></mat-checkbox>
+
+    <img src="/assets/img/Eyeball_Collection_rune.png" class="icon" style="margin-left: 10px"/>
     Eyeball collection: <mat-checkbox [(ngModel)]="eyeball"></mat-checkbox>
   </div>
 

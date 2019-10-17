@@ -22,6 +22,8 @@ export class AppComponent {
   gatheringValue;
   alacrity = false; // 18% max
   eyeball = false;
+  lethalTempo = false;
+  hailOfBlades = false;
 
   list: Array<{items: Item[], ad: number}> = [];
 
@@ -112,6 +114,12 @@ export class AppComponent {
     if(this.eyeball){
       console.log("eyeball");
       ad+= 18;
+    }
+    if(this.hailOfBlades){
+      as+= 110;
+    }
+    if(this.lethalTempo){
+      as+= 35.882 + 4.118 * this.level;
     }
 
     let percentage = this.passiveScaling[this.level-1];
