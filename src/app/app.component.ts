@@ -55,21 +55,6 @@ export class AppComponent {
      this.list.push({items: items, ad: val});
 
    });
-    // here
-
-
-      // if(indexes[0] === max-5 && indexes[5] === max){
-      //   working= false;
-      //   break;
-      // }
-      //
-      // for(let i=5;i>=0;i--){
-      //   if(indexes[i] != max-5+i){
-      //     indexes[i] = indexes[i] + 1;
-      //     break;
-      //   }
-      // }
-
 
 
 
