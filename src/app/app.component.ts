@@ -67,7 +67,6 @@ export class AppComponent {
 
   calculate(...items: Item[]): number{
     let ad = this.getBaseAd();
-    console.log(this.getBaseAd());
     let as = this.getBonusAS();
     let crit = 0;
     let cdr = 0;
@@ -127,11 +126,16 @@ export class AppComponent {
     percentage += crit* 0.4;
     percentage += 0.25 * as;
 
+
+
+    let infernalBonus = 0;
+
     if(this.infernal){
-      ad = ad * (1+(this.infernal/10));
+      infernalBonus= ad * (((this.infernal-1)*7 + 10)/100);
+
     }
 
-    return ad + (ad/100*percentage);
+    return ad + (ad/100*percentage) + infernalBonus;
   }
 
 
@@ -142,7 +146,6 @@ export class AppComponent {
   passiveScaling = [4,5,6,7,8,9,10,11,12,14,16,20,24,28,32,36,40,44];
 
   getAbsoluteFocus(){
-    console.log(0.847 + 0.953 * this.level);
     return 0.847 + 0.953 * this.level
   }
 
