@@ -67,7 +67,7 @@ export class AppComponent {
 
   calculate(...items: Item[]): number{
     let ad = this.getBaseAd();
-    let as = this.getBonusAS();
+    let as = 0;
     let crit = 0;
     let cdr = 0;
 
