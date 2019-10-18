@@ -71,6 +71,7 @@ export class AppComponent {
     let crit = 0;
     let cdr = 0;
 
+
     items.forEach(i => {
       ad+= i.damage;
       as+= i.speed;
@@ -112,7 +113,7 @@ export class AppComponent {
       ad+= 18;
     }
     if(this.hailOfBlades){
-      as+= 110;
+      as+= 112;
     }
     if(this.lethalTempo){
       as+= 35.882 + 4.118 * this.level;
