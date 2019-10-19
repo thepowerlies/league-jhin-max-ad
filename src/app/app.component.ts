@@ -113,7 +113,7 @@ export class AppComponent {
       ad+= 18;
     }
     if(this.hailOfBlades){
-      as+= 112;
+      as+= 110;
     }
     if(this.lethalTempo){
       as+= 35.882 + 4.118 * this.level;
